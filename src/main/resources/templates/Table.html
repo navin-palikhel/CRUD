@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Data-Table</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/Style.css">
+</head>
+<body>
+<div class="container">
+    <div>
+        <table class="table">
+             <thead>
+                 <tr>
+                     <th scope="col">Id</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Email</th>
+                     <th scope="col">Contact Number</th>
+                     <th scope="col">Subject</th>
+                     <th scope="col">Queries</th>
+                     <th scope="col">Actions</th>
+                 </tr>
+             </thead>
+             <tbody>
+                  <tr th:each="employee : ${employees}">
+                      <td th:text="${employee.id}"></td>
+                      <td th:text="${employee.name}"></td>
+                      <td th:text="${employee.email}"></td>
+                      <td th:text="${employee.contactNumber}"></td>
+                      <td th:text="${employee.subject}"></td>
+                      <td th:text="${employee.queries}"></td>
+                      <td>
+                          <a th:href="'/employee/update/'+${employee.id}" class="btn btn-primary">Edit</a>
+                         <a th:href="'/employee/delete/'+${employee.id}" class="btn btn-primary">Delete</a>
+
+                      </td>
+<!--                      <td th:text="${employee.save}"><Button type="button" onclick="alert('Hello world!')">Edit</button>  </td>-->
+<!--                      <td th:text="${employee.save}"><Button type="button" onclick="alert('Hello world!')">Delete</button>  </td>-->
+                  </tr>
+             </tbody>
+        </table>
+        <a href="/employee/new" class="btn btn-primary">Add</a>
+    </div>
+</div>
+
+</body>
+</html>
