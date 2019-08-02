@@ -9,3 +9,26 @@
     margin-left: 380px;
     margin-top: 80px;
 }
+
+.card{
+    float: right;
+    width: 380px;
+    height: 500px;
+    margin: 10px -150px 0 10px;
+}
+
+#text{
+    margin: 20px 250px 0 -180px;
+}
+
+.form-group{
+    margin-top: 30px;
+}
+
+#register{
+    margin-top: 150px;
+    margin-left: 450px;
+    width: 500px;
+    height: 350px;
+}
+

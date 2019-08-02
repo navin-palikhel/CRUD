@@ -5,9 +5,9 @@
  */
 
 
-package com.navin.crud.Service;
+package com.navin.crud.Operation;
 
-import com.navin.crud.Entity.Employee;
+import com.navin.crud.Operation.Employee;
 import java.util.List;
 
 public interface EmployeeService {

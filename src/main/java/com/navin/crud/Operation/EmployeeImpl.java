@@ -1,7 +1,5 @@
-package com.navin.crud.Service;
+package com.navin.crud.Operation;
 
-import com.navin.crud.Entity.Employee;
-import com.navin.crud.Repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

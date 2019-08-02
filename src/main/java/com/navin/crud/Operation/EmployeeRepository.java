@@ -2,9 +2,9 @@
  * Connection is made with database
  */
 
-package com.navin.crud.Repository;
+package com.navin.crud.Operation;
 
-import com.navin.crud.Entity.Employee;
+import com.navin.crud.Operation.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -2,7 +2,7 @@
  * entites are created for the database
  *
  */
-package com.navin.crud.Entity;
+package com.navin.crud.Operation;
 
 
 import javax.persistence.*;

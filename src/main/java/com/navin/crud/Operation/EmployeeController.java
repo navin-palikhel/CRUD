@@ -4,11 +4,9 @@
  * fetch data from view and sends data to view [front end page]
  */
 
-package com.navin.crud.Controller;
+package com.navin.crud.Operation;
 
 
-import com.navin.crud.Entity.Employee;
-import com.navin.crud.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +22,8 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    @GetMapping("/")
+
+    @GetMapping("/index")
     public String listEmployee(Model model) {
         List<Employee> employeeList = employeeService.listAllEmployee();
         model.addAttribute("employees", employeeList);
@@ -40,7 +39,7 @@ public class EmployeeController {
     @PostMapping("/employee/save")
     public String saveEmployee(Employee employee) {
         employeeService.save(employee);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
 
@@ -54,7 +53,7 @@ public class EmployeeController {
     @GetMapping("/employee/delete/{id}")
     public String getDeleteEmployee(@PathVariable("id") Long id) {
         employeeService.delete(id);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
 }
